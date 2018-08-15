@@ -1,6 +1,7 @@
 # Map Of The World Cup
 
 By Derek Shin
+
 August 2018
 
 * * *
@@ -21,11 +22,11 @@ England, Northern Ireland, Scotland and Wales.
 - Lastly, I changed the name attribute for those four countries from 'NAME_1' to 'name' in order to match the name attribute for the other countries.
 
 - On the '50m.geo.json', I changed the name of:
-"Korea" to "South Korea",
-"Dem. Rep. Korea" to "North Korea",
-"Bosnia and Herz." to "Bosnia and Herzegovina",
-"Côte d'Ivoire" to "Ivory Coast"
-"Czech Rep." to "Czech Republic".
+  "Korea" to "South Korea",
+  "Dem. Rep. Korea" to "North Korea",
+  "Bosnia and Herz." to "Bosnia and Herzegovina",
+  "Côte d'Ivoire" to "Ivory Coast"
+  "Czech Rep." to "Czech Republic".
 
 * * *
 
@@ -58,8 +59,12 @@ England, Northern Ireland, Scotland and Wales.
 - 'd3.svg.axis().scale().orient()' was changed to 'd3.axisBottom()'.
 - 'd3.behavior.drag()' was changed to 'd3.drag()'.
 
+* * *
+
 #### Features
 - **Timeline Map** shows the countries that participated in the FIFA World Cup from 1930 to 2018.
+
+* * *
 
 #### Features to come
 - **Aggregate Map** will show a map that colors countries based on their numbers of participations.
