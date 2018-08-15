@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Map of the World Cup</title>
+
+	<!-- Importing jQuery, d3 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+
+	<!-- Slider -->
+	<!-- from https://github.com/sujeetsr/d3.slider -->
+	<script src="js/d3.slider.js"></script>
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+	<div class="intro">
+		<p class="introinfo">INITIALLY PUBLISHED AUG. 15, 2018 AT 12:00 AM</p>
+		<h1>Map Of The World Cup</h1>
+		<p class="introinfo">By Derek Shin</p>
+  </div>
+
+	<p class="text">
+		I have heard people say that the 2018 FIFA World Cup was the best World Cup they had ever seen.
+		I have only watched five editions, but it was the best one for me, too.
+		Inspired by a month of daily entertainment produced by the World Cup this year, I wanted to see which nations had participated in this lovely tournament, historically, on a map.
+	</p>
+
+
+	<div class="viz-container">
+		<div class= "map-country-container">
+			<div class="map-container"></div>
+			<div class="country-container">
+				<div id="country-list-header"></div>
+				<div id="country-list-number"></div>
+				<hr>
+				<div class="country-list"></div>
+			</div>
+		</div>
+
+		<div class="slider-container">
+			<button class="slider-button"></button>
+			<div class="slider"></div>
+		</div>
+	</div>
+
+	<script src="js/map.js"></script>
+	<script src="js/slider.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+
+body {
+  background-color: #ecebe7;
+}
+
+.intro {
+  text-align: center;
+  padding: 30px 0 40px 0;
+}
+
+p.introinfo {
+  letter-spacing: .5px;
+  font-size: 12px;
+  font-family: "DecimaMonoPro",monospace;
+  color: #999999;
+}
+
+h1 {
+  font-family: "Balto Web",HelveticaNeue,Helvetica,Arial,sans-serif;
+  margin: 5px 0 5px 0;
+  font-size: 40px;
+  line-height: 1.27;
+  color: #222222;
+}
+
+p {
+  font-family: "Harriet Text",Georgia,Times,"Times New Roman",serif;
+  line-height: 1.7;
+  color: #222222;
+  width: 40%;
+  margin: 0 auto;
+}
+
+p.text {
+  padding-bottom: 28px;
+}
+
+
+.viz-container {
+  margin: 2% 7% 0% 7%;
+}
+
+.map-country-container {
+
+}
+
+/*******************************/
+/*             Map             */
+/*******************************/
+
+.map-container {
+  display: inline-block;
+}
+
+#svg-map {
+  border: solid 1px #a9a9a9;
+  box-shadow: 2px 5px 22px #a9a9a9;
+}
+
+.country {
+  fill: #d0d0d0;     /* country color */
+  stroke: #ffffff;   /* country border color */
+  stroke-width: 0.5; /* country border width */
+}
+
+.country-on {
+  fill: #c89696 !important; /* highlight color for mouseover country */
+  /* fill: #2A2C39; */
+}
+
+.country-selected {
+  fill: #4b5358; /* highlight color for selected country (country that is in a World Cup) */
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: auto;
+  height: 12px;
+  padding: 2px;
+  font: 12px monospace,'Times New Roman',serif;
+  background: white;
+  border: solid 0px;
+  pointer-events: none;
+}
+
+/* #30BCED; */  /* light blue */
+
+/*******************************/
+/*        Country list         */
+/*******************************/
+
+.country-container {
+  vertical-align: top;
+  display: inline-block;
+  padding: 0.5% 0 0 1%;
+  width: 10%;
+}
+
+#country-list-header {
+  font: 13px monospace;
+  font-weight: bold;
+  margin: 0 0 1px 0;
+}
+
+#country-list-number {
+  font: 10px monospace;
+  font-style: italic;
+  margin: 4px 0 1px 0;
+}
+
+hr {
+  border-color: #4b5358;
+  border-width: 1px;
+  width: 90%;
+  margin-right: 10%;
+}
+
+.country-list {
+  margin: 0 8% 0 0;
+}
+
+.country-name {
+  padding: 2px 0 0 0;
+  font: 12px monospace;
+}
+
+.country-name-on {
+  background: #c89696;
+  /* color: #000000; */
+  font-weight: bold;
+}
+
+/*******************************/
+/*           Slider            */
+/*******************************/
+
+.slider-container {
+  overflow: hidden;
+  padding: 1.25% 0% 0% 0%;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.slider-button {
+  float: left;
+  background: url("../img/myplaybutton.png");
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  width: 30px;
+  height: 30px;
+  vertical-align: top;
+  margin-top: 17px;
+  border: none;
+}
+
+.d3slider {
+  float: left;
+  z-index: 2;
+  height: 100%;
+  width: 50vw;
+  background: none;
+}
+
+.d3slider-rect-range {
+  fill: #d0d0d0;
+  stroke: none;
+}
+
+.d3slider-rect-value {
+  fill: #006EE3;
+  stroke: none;
+}
+
+.d3slider-axis {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.d3slider-axis path {
+  display: none;
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.d3slider-axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.d3slider text {
+  font: 10px 'Atlas Grotesk Web','Atlas Grotesk Web',Helvetica,Arial,sans-serif;;
+}
+
+.tick.minor text {
+  display: none;
+}
+
+.tick line {
+  stroke-width: 1;
+}
+.tick.minor line {
+  stroke-width: 1;
+  stroke: #bbb;
+}
+
+.dragger rect {
+  fill: #71ACE3;
+  stroke: none;
+  z-index: 3;
+}
+
+.dragger line {
+  stroke: #aa0000;
+  fill: none;
+}
+
+.dragger-outer {
+  fill: #fff;
+  stroke: #696969;
+  stroke-width: 2;
+}
+
+.dragger-inner {
+  fill: none;
+  stroke: none;
+}
+
+.min-marker line {
+  stroke: #aa0000;
+  fill: none;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+  z-index: 1;
+}
