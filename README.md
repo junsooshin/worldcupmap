@@ -1,5 +1,7 @@
 # Map Of The World Cup
 
+Check it out at [junsooshin.github.io/worldcupmap](junsooshin.github.io/worldcupmap)
+
 By Derek Shin
 
 August 2018
