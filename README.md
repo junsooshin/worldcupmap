@@ -1,6 +1,6 @@
 # Map Of The World Cup
 
-Check it out at [junsooshin.github.io/worldcupmap](junsooshin.github.io/worldcupmap)
+Check it out at [junsooshin.github.io/worldcupmap](https://junsooshin.github.io/worldcupmap)
 
 By Derek Shin
 
