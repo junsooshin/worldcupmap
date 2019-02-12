@@ -74,28 +74,6 @@ var worldcup_data = (function () {
   return result;
 })();
 
-// create { year_1 : country_1,
-//          year_2 : country_2,
-//          ... }
-var host_data = (function () {
-  var result = {};
-  $.ajax({
-    'async': false,
-    'url': "data/worldcup/hosts.txt",
-    'dataType': "text",
-    'success': function (data) {
-      var arr = data.split("\n");
-      for (var row of arr) {
-        var split_row = row.split(",");
-        var year = split_row[0];
-        var country = split_row[1];
-          result[year] = country;
-      }
-    }
-  });
-  return result;
-})();
-
 var old_countries_dict = {
   "Serbia and Montenegro": ["Serbia", "Montenegro"],
   "Soviet Union": ["Armenia", "Azerbaijan", "Belarus", "Estonia", "Georgia", "Kazakhstan", "Kyrgyzstan",
@@ -209,18 +187,16 @@ function color_countries(worldcup_data, year) {
 };
 
 // create a list of the World Cup countries for the year
-function create_country_list(worldcup_data, host_data, year) {
-  if (!worldcup_data.hasOwnProperty(year) || isEmpty(host_data)) {
+function create_country_list(worldcup_data, year) {
+  if (!worldcup_data.hasOwnProperty(year)) {
     return;
   }
 
   var country_arr = worldcup_data[year].sort();
-  var host = host_data[year]
 
   // empty the previous list
   $(".country-list").empty();
   $("#country-list-header").text(year + " World Cup");
-  $("#country-host").text("Hosted in " + host);
   $("#country-list-number").text(country_arr.length + " countries");
 
   // fill the div with country names
@@ -282,4 +258,4 @@ function create_country_list(worldcup_data, host_data, year) {
 
 draw_map(map_data);
 color_countries(worldcup_data, 2018);
-create_country_list(worldcup_data, host_data, 2018);
+create_country_list(worldcup_data, 2018);
