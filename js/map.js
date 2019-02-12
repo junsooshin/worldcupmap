@@ -6,29 +6,29 @@ var width  = $(window).width() * 0.75,
     height = width / 1.75;
 
 var projection = d3.geoMercator()
-	.translate( [width / 2, height / 2] )
-	.center([0, 30])  // center more north
-	.rotate([-11, 0]) // connect Russia
-	.scale([width / (2 * Math.PI)]);
+  .translate( [width / 2, height / 2] )
+  .center([0, 30])  // center more north
+  .rotate([-11, 0]) // connect Russia
+  .scale([width / (2 * Math.PI)]);
 
 var path = d3.geoPath()
-	.projection(projection);
+  .projection(projection);
 
 var zoom = d3.zoom()
-	.scaleExtent([1, 15])												// limits zooming and panning
-	.translateExtent([[0,0], [width, height]])  // limits the moving around of the map
-	.on("zoom", zoomed);
+  .scaleExtent([1, 15])                       // limits zooming and panning
+  .translateExtent([[0,0], [width, height]])  // limits the moving around of the map
+  .on("zoom", zoomed);
 
 var svg = d3.select(".map-container").append("svg")
   .attr("id", "svg-map")
-	.attr("width", width)
-	.attr("height", height)
-	.call(zoom);
+  .attr("width", width)
+  .attr("height", height)
+  .call(zoom);
 
 g = svg.append("g");
 
 function zoomed() {
-	g.attr("transform", d3.event.transform);
+  g.attr("transform", d3.event.transform);
 };
 
 /*******************************/
@@ -135,23 +135,23 @@ function unset_tooltip() {
 // draw the map
 function draw_map(map_data) {
 
-	g.selectAll(".country")
-		.data(map_data.features)
-		.enter()
-		.append("path")
-		.attr("class", "country")
-		.attr("id", function(map_data) {
-			return map_data.properties.name.replace(/\s+/g, ''); // country name might have whitespace, and id should not have one
-		})
-		.attr("d", path)
-		.on("mouseover", function(map_data) {
-			d3.select(this).classed("country-on", true);
+  g.selectAll(".country")
+    .data(map_data.features)
+    .enter()
+    .append("path")
+    .attr("class", "country")
+    .attr("id", function(map_data) {
+      return map_data.properties.name.replace(/\s+/g, ''); // country name might have whitespace, and its id should not have one
+    })
+    .attr("d", path)
+    .on("mouseover", function(map_data) {
+      d3.select(this).classed("country-on", true);
       set_tooltip(map_data);
-		})
-		.on("mouseout", function(d) {
-			d3.select(this).classed("country-on", false);
+    })
+    .on("mouseout", function(d) {
+      d3.select(this).classed("country-on", false);
       unset_tooltip();
-		});
+    });
 
 };
 
