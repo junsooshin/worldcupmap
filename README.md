@@ -13,7 +13,7 @@ August 2018
 - **UK geojson data** from (https://gadm.org/download_country_v3.html), imported 'gadm36_GBR_1.shp' and 'gadm36_GBR_1.dbf' files
 into (http://mapshaper.org), used 'detect line intersections' and 'snap vertices' options, and simplified using 'Visvalingam / weighted area' method
 to 0.08% to match the border details of the world geojson data. All of that resulted in 'gadm36_GBR_1.json'.
-- **List of countries** that participated in the FIFA World Cup was gathered manually from Wikipedia. (Countries that qualified but withdrew were not used).
+- **List of countries** that participated and hosted in the FIFA World Cup was gathered manually from Wikipedia. (Countries that qualified but withdrew were not used).
 
 * * *
 
@@ -66,9 +66,3 @@ England, Northern Ireland, Scotland and Wales.
 
 #### Features
 - **Timeline Map** shows the countries that participated in the FIFA World Cup from 1930 to 2018.
-
-* * *
-
-#### Features to come
-- **Aggregate Map** will show a map that colors countries based on their numbers of participations.
-- **Analysis** will list the findings from looking at the maps.

@@ -103,6 +103,12 @@ div.tooltip {
   margin: 0 0 1px 0;
 }
 
+#country-host {
+  font: 10px monospace;
+  font-style: italic;
+  margin: 4px 0 1px 0;
+}
+
 #country-list-number {
   font: 10px monospace;
   font-style: italic;
